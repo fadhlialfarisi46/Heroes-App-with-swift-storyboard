@@ -10,23 +10,21 @@ import WebKit
 
 class WikipediaViewController: UIViewController, WKNavigationDelegate {
     
-    var webView: WKWebView!
+    private var webView: WKWebView!
     
     var url: String?
-    
-    override func loadView() {
-        super.loadView()
-          let webConfiguration = WKWebViewConfiguration()
-          webView = WKWebView(frame: .zero, configuration: webConfiguration)
-          webView.navigationDelegate = self
-          view = webView
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: url ?? "www.google.com")!
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.navigationDelegate = self
+        view = webView
+        
+        let url = URL(string: url ?? "https://www.google.com")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        
     }
 }

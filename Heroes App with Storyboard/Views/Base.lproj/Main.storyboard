@@ -98,7 +98,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goToWikipediaPressed:" destination="TT0-dG-i4w" eventType="touchUpInside" id="kaj-1L-WM4"/>
-                                    <segue destination="aFy-1g-hGQ" kind="show" identifier="goToWiki" id="BuW-5d-7Ef"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-oy-Eit">
@@ -117,6 +116,7 @@
                         <outlet property="heroDesc" destination="GaZ-iY-jXY" id="At0-GO-9NS"/>
                         <outlet property="heroImage" destination="cIY-4o-ir7" id="thg-nx-wv3"/>
                         <outlet property="heroTitle" destination="4zb-oy-Eit" id="7C9-RM-l2O"/>
+                        <segue destination="aFy-1g-hGQ" kind="show" identifier="goToWiki" id="csf-gg-kkc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9s-6w-5cp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
