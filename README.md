@@ -1,5 +1,5 @@
 # Heroes-App-with-swift-storyboard
-Simple iOS app built with Storyboard, URLSession for networking (get API), TableView with custom cell and WKWebview for showing webview
+Simple iOS app built with Storyboard for create view and connection between view/controller, MVC design pattern, URLSession for networking (get API), TableView with custom cell and WKWebview for showing webview
 
 -----
 
