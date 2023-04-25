@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gnb-hh-gOU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Indonesian Heroes-->
+        <scene sceneID="B3f-H8-UOh">
+            <objects>
+                <tableViewController title="Indonesian Heroes" id="LBg-j4-fq2" customClass="HeroTableViewController" customModule="Heroes_App_with_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9dC-kg-vEs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroCell" id="szg-gU-jOU" customClass="HeroTableViewCell" customModule="Heroes_App_with_Storyboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="126.33333587646484"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="szg-gU-jOU" id="16M-W3-kso">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="126.33333587646484"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kFr-Iz-H6Y">
+                                            <rect key="frame" x="8" y="8" width="100" height="110.33333333333333"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="TwZ-32-VMd"/>
+                                                <constraint firstAttribute="height" constant="110" id="ncM-u2-NsY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x97-sf-xHM">
+                                            <rect key="frame" x="124" y="11" width="249" height="104.33333333333333"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="x97-sf-xHM" firstAttribute="top" secondItem="16M-W3-kso" secondAttribute="topMargin" id="8uh-90-h7D"/>
+                                        <constraint firstItem="kFr-Iz-H6Y" firstAttribute="top" secondItem="16M-W3-kso" secondAttribute="top" constant="8" id="gAC-Y2-b3Z"/>
+                                        <constraint firstItem="kFr-Iz-H6Y" firstAttribute="leading" secondItem="16M-W3-kso" secondAttribute="leading" constant="8" id="gX3-gS-YWO"/>
+                                        <constraint firstItem="x97-sf-xHM" firstAttribute="centerY" secondItem="16M-W3-kso" secondAttribute="centerY" id="oY2-mp-4Xh"/>
+                                        <constraint firstItem="x97-sf-xHM" firstAttribute="leading" secondItem="kFr-Iz-H6Y" secondAttribute="trailing" constant="16" id="tue-cm-XQX"/>
+                                        <constraint firstAttribute="bottom" secondItem="kFr-Iz-H6Y" secondAttribute="bottom" constant="8" id="x8y-aC-tx1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="x97-sf-xHM" secondAttribute="trailing" id="xTI-Z3-hfa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="HeroTitle" destination="x97-sf-xHM" id="gv3-mM-Mp2"/>
+                                    <outlet property="heroImage" destination="kFr-Iz-H6Y" id="Hvf-uY-zwB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LBg-j4-fq2" id="kFB-H5-sjd"/>
+                            <outlet property="delegate" destination="LBg-j4-fq2" id="Et1-zU-qsG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Indonesian Heroes" id="Md0-hd-c6k"/>
+                    <connections>
+                        <segue destination="TT0-dG-i4w" kind="show" identifier="goToDetail" id="ekC-eh-Y97"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3B6-nm-E4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330.53435114503816" y="134.50704225352112"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="yTx-zx-KX5">
+            <objects>
+                <viewController id="TT0-dG-i4w" customClass="DetailViewController" customModule="Heroes_App_with_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aj5-4y-xjm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-4o-ir7">
+                                <rect key="frame" x="0.0" y="103" width="393" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaZ-iY-jXY">
+                                <rect key="frame" x="16" y="461" width="361" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gev-ty-pG4">
+                                <rect key="frame" x="16" y="771" width="361" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="See Detail on Wikipedia">
+                                    <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToWikipediaPressed:" destination="TT0-dG-i4w" eventType="touchUpInside" id="kaj-1L-WM4"/>
+                                    <segue destination="aFy-1g-hGQ" kind="show" identifier="goToWiki" id="BuW-5d-7Ef"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-oy-Eit">
+                                <rect key="frame" x="16" y="432" width="361" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XSo-g2-4Bb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XGk-7S-2KA"/>
+                    <connections>
+                        <outlet property="heroDesc" destination="GaZ-iY-jXY" id="At0-GO-9NS"/>
+                        <outlet property="heroImage" destination="cIY-4o-ir7" id="thg-nx-wv3"/>
+                        <outlet property="heroTitle" destination="4zb-oy-Eit" id="7C9-RM-l2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9s-6w-5cp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130.534351145038" y="134.50704225352112"/>
+        </scene>
+        <!--Wikipedia View Controller-->
+        <scene sceneID="ZOH-YJ-wud">
+            <objects>
+                <viewController id="aFy-1g-hGQ" customClass="WikipediaViewController" customModule="Heroes_App_with_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj8-qW-5Xv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIU-aJ-eS3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Up-im-tvL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eTb-aB-1fC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2X-QD-u1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nSc-YX-rD1">
+            <objects>
+                <navigationController id="Gnb-hh-gOU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ZD-UB-Hyu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LBg-j4-fq2" kind="relationship" relationship="rootViewController" id="4XB-QX-Uf1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAU-hy-esx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-573" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
